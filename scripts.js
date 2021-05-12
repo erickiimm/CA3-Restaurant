@@ -31,3 +31,5 @@
         var errorElement = document.getElementById("error-message");
         var errorText = document.createTextNode(`*Invalid format, please reenter. (${hints.join(", ")})`);
         errorElement.appendChild(errorText);
+    }
+})
