@@ -101,6 +101,9 @@ function renderCustomers() {
         }
     })
 }
+//My Menu 
+
+//Courses 
 function renderMenu() {
     var menuList = document.getElementById("menu-list");
     var startersTitle = document.createElement("h2");
