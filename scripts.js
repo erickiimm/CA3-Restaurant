@@ -123,3 +123,27 @@ function renderMenu() {
     menuList.appendChild(drinksTitle);
     renderMenuCategory(drinks, menuList);
 }
+// Category 
+function renderMenuCategory(category, menuList) {
+    for (var i = 0; i < category.length; i++) {
+        var element = document.createElement("div");
+        element.setAttribute("id",category[i].id);
+        var elementAddButton = document.createElement("button");
+        elementAddButton.classList.add('add');
+        elementAddButton.textContent = "ADD";
+        var elementRemoveButton = document.createElement("button");
+        elementRemoveButton.classList.add('remove');
+        elementRemoveButton.textContent = "REMOVE";
+        var elementText = document.createElement("p");
+        elementText.textContent = `${category[i].name} (${category[i].description})`;
+        var elementQuantity = document.createElement("b");
+        elementQuantity.textContent = " x0";
+        var elementCost = document.createElement("span");
+        elementCost.textContent = `€ ${category[i].cost}`;
+        element.appendChild(elementAddButton);
+        element.appendChild(elementRemoveButton);
+        if (category[i].vegetarian) {
+            var vegetarianImg = document.createElement("img");
+            vegetarianImg.src = "assets/imgs/leaf.jpg";
+            element.appendChild(vegetarianImg);
+        }
