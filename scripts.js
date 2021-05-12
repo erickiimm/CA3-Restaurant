@@ -33,3 +33,17 @@
         errorElement.appendChild(errorText);
     }
 })
+// Division of the page
+window.onload = () => {
+    renderCustomers();
+    renderMenu();
+    var addButtons = document.querySelectorAll(".add");
+    addButtons.forEach(element => {
+        element.addEventListener("click", () => {
+            var quantity = parseInt(element.parentElement.querySelector("b").textContent.replace("x",""));
+            quantity++;
+            element.parentElement.querySelector("b").textContent = ` x${quantity}`;
+        })
+    })
+
+    
