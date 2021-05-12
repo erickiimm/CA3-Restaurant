@@ -14,5 +14,39 @@
             <div class="divider"></div>
             <a href="slider.html">Slider</a>
         </div>
+        <div class="card">
+            <h1>Slick ! (with jQuery)</h1>
+            <p>In this page, used two libs: Slick, for responsive and easy carousel, and jQuery. The carousel shows the burguers on the main dish.</p>
+            <br><br>
+            <div class="slider">
+                <div>
+                    <img src="assets/imgs/burguer1.jpg" alt="Chicken sandwitch" />
+                    <h4>Chicken sandwitch</h4>
+                </div>
+                <div>
+                    <img src="assets/imgs/burguer2.jpg" alt="Rump Steak Burguer" />
+                    <h4>Rump Steak Burguer</h4>
+                </div>
+                <div>
+                    <img src="assets/imgs/burguer3.jpg" alt="Soy Meat Burguer" />
+                    <h4>Soy Meat Burguer</h4>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".slider").slick({
+                    infinite: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    fade: true,
+                    cssEase: 'linear'
+                });
+            });
+        </script>
     </body>
     </html>
