@@ -197,3 +197,27 @@ document.getElementById("calculate").addEventListener("click", () => {
     document.getElementById("vegetarian").textContent = vegetarian;
     document.getElementById("non-vegetarian").textContent = nonVegetarian;
 })
+// Starters 
+var starters = [
+    {
+        id: 1,
+        name: "Fries",
+        description: "A portion of crunchy fries!",
+        cost: "4",
+        vegetarian: true,
+    },
+    {
+        id: 2,
+        name: "Special Fries",
+        description: "A portion of crunchy fries, with cheese and bacon!",
+        cost: "7",
+        vegetarian: false,
+    },
+    {
+        id: 3,
+        name: "Chicken Wings",
+        description: "A portion of chicken wings, with homemade sauce.",
+        cost: "8",
+        vegetarian: false,
+    }
+];
