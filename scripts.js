@@ -10,3 +10,4 @@
     if (!(/[a-z]/.test(inputValue))) {        
         passwordOk = false;
         hints.push("The password must have at least one lowercase letter");
+    }
