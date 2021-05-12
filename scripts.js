@@ -46,7 +46,7 @@ window.onload = () => {
             element.parentElement.querySelector("b").textContent = ` x${quantity}`;
         })
     })
-    
+    // Adding buttons to remove itens 
     var addButtons = document.querySelectorAll(".remove");
     addButtons.forEach(element => {
         element.addEventListener("click", () => {
