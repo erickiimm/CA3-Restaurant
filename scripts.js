@@ -188,3 +188,12 @@ document.getElementById("calculate").addEventListener("click", () => {
             nonVegetarian += quantity * value;
         }
     }
+    //Breakdown bill
+    document.getElementById("total").textContent = total;
+    document.getElementById("starters").textContent = startersBill;
+    document.getElementById("mains").textContent = mainsBill;
+    document.getElementById("desserts").textContent = dessertsBill;
+    document.getElementById("drinks").textContent = drinksBill;
+    document.getElementById("vegetarian").textContent = vegetarian;
+    document.getElementById("non-vegetarian").textContent = nonVegetarian;
+})
