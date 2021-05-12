@@ -153,3 +153,38 @@ function renderMenuCategory(category, menuList) {
         menuList.appendChild(element);
     }
 }
+// Calculator
+document.getElementById("calculate").addEventListener("click", () => {
+    var items = document.querySelectorAll("#menu-list > div");
+    var total = 0;
+    var startersBill = 0;
+    var mainsBill = 0;
+    var dessertsBill = 0;
+    var drinksBill = 0;
+    var vegetarian = 0;
+    var nonVegetarian = 0;
+    for (var i = 0; i < items.length; i++) {
+        var quantity = parseInt(items[i].querySelector("b").textContent.replace("x",""));
+        var value = parseInt(items[i].querySelector("span").textContent.replace("€ ",""));
+        var isVegetarian = !!items[i].querySelector("img");
+        var isStarters = starters.filter(x => x.id == items[i].getAttribute("id")).length > 0;
+        var isMains = mains.filter(x => x.id == items[i].getAttribute("id")).length > 0;
+        total += quantity * value;
+        if (isStarters) {
+            startersBill += quantity * value;
+        }
+        if (isMains) {
+            mainsBill += quantity * value;
+        }
+        if (desserts.filter(x => x.id == items[i].getAttribute("id")).length > 0) {
+            dessertsBill += quantity * value;
+        }
+        if (drinks.filter(x => x.id == items[i].getAttribute("id")).length > 0) {
+            drinksBill += quantity * value;
+        }
+        if (isVegetarian && (isStarters || isMains)) {
+            vegetarian += quantity * value;
+        } else if (isStarters || isMains) {
+            nonVegetarian += quantity * value;
+        }
+    }
