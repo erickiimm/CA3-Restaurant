@@ -37,6 +37,7 @@
 window.onload = () => {
     renderCustomers();
     renderMenu();
+    // Adding buttons to add itens 
     var addButtons = document.querySelectorAll(".add");
     addButtons.forEach(element => {
         element.addEventListener("click", () => {
@@ -45,5 +46,15 @@ window.onload = () => {
             element.parentElement.querySelector("b").textContent = ` x${quantity}`;
         })
     })
-
     
+    var addButtons = document.querySelectorAll(".remove");
+    addButtons.forEach(element => {
+        element.addEventListener("click", () => {
+            var quantity = parseInt(element.parentElement.querySelector("b").textContent.replace("x",""));
+            if (quantity > 0) {
+                quantity--;
+                element.parentElement.querySelector("b").textContent = ` x${quantity}`;
+            }
+        })
+    })
+}
