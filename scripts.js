@@ -101,3 +101,22 @@ function renderCustomers() {
         }
     })
 }
+function renderMenu() {
+    var menuList = document.getElementById("menu-list");
+    var startersTitle = document.createElement("h2");
+    startersTitle.textContent = "Starters";
+    menuList.appendChild(startersTitle);
+    renderMenuCategory(starters, menuList);
+    var mainsTitle = document.createElement("h2");
+    mainsTitle.textContent = "Main";
+    menuList.appendChild(mainsTitle);
+    renderMenuCategory(mains, menuList);
+    var dessertsTitle = document.createElement("h2");
+    dessertsTitle.textContent = "Desserts";
+    menuList.appendChild(dessertsTitle);
+    renderMenuCategory(desserts, menuList);
+    var drinksTitle = document.createElement("h2");
+    drinksTitle.textContent = "Drinks";
+    menuList.appendChild(drinksTitle);
+    renderMenuCategory(drinks, menuList);
+}
