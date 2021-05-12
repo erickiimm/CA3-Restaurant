@@ -147,3 +147,9 @@ function renderMenuCategory(category, menuList) {
             vegetarianImg.src = "assets/imgs/leaf.jpg";
             element.appendChild(vegetarianImg);
         }
+        element.appendChild(elementText);
+        element.appendChild(elementQuantity);
+        element.appendChild(elementCost);
+        menuList.appendChild(element);
+    }
+}
