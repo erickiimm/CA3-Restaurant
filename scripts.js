@@ -58,3 +58,46 @@ window.onload = () => {
         })
     })
 }
+// User generation with thumbnail image
+function renderCustomers() {
+    fetch("https://randomuser.me/api/?results=5").then((resp) => resp.json())
+    .then(data => {
+        var users = data.results;
+        var customersDiv = document.getElementById("customers-list");
+        for (var i = 0; i < users.length; i++) {
+            var customerDiv = document.createElement("div");
+            customerDiv.classList.add("customer");
+            var photo = document.createElement("img");
+            photo.src = users[i].picture.thumbnail;
+            customerDiv.appendChild(photo);
+            var name = document.createElement("p");
+            name.textContent = `name: ${users[i].name.first}`;
+            customerDiv.appendChild(name);
+            var phone = document.createElement("p");
+            phone.textContent = `phone number: ${users[i].phone}`;
+            customerDiv.appendChild(phone);
+            var dob = document.createElement("p");
+            dob.textContent = `dob: ${users[i].dob.date}`;
+            customerDiv.appendChild(dob);
+            var age = document.createElement("p");
+            age.textContent = `age: ${users[i].dob.age}`;
+            customerDiv.appendChild(age);
+            var email = document.createElement("p");
+            email.textContent = `email: ${users[i].email}`;
+            customerDiv.appendChild(email);
+            var gender = document.createElement("p");
+            gender.textContent = `gender: ${users[i].gender}`;
+            customerDiv.appendChild(gender);
+            var city = document.createElement("p");
+            city.textContent = `city: ${users[i].location.city}`;
+            customerDiv.appendChild(city);
+            var country = document.createElement("p");
+            country.textContent = `country: ${users[i].location.country}`;
+            customerDiv.appendChild(country);
+            var postCode = document.createElement("p");
+            postCode.textContent = `post code: ${users[i].location.postcode}`;
+            customerDiv.appendChild(postCode);
+            customersDiv.appendChild(customerDiv);
+        }
+    })
+}
