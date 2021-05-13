@@ -10,7 +10,8 @@ body {
     font-weight: 400;
     font-style: normal;
     src: url("assets/fonts/Girassol-Regular.ttf");
-    
+}
+
 @font-face {
     font-family: surfer;
     font-weight: 400;
