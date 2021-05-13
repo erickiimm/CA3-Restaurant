@@ -221,3 +221,27 @@ var starters = [
         vegetarian: false,
     }
 ];
+// Main couse 
+var mains = [
+    {
+        id: 4,
+        name: "Chicken Sandwich",
+        description: "A sandwich with crunchy chicken and mayo!",
+        cost: "14",
+        vegetarian: false,
+    },
+    {
+        id: 5,
+        name: "Rump Steak Burguer",
+        description: "A premium burguer with the best meat!",
+        cost: "18",
+        vegetarian: false,
+    },
+    {
+        id: 6,
+        name: "Soy Meat Burguer",
+        description: "A delicious vegetarian burguer!",
+        cost: "19",
+        vegetarian: true,
+    }
+];
