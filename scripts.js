@@ -269,3 +269,27 @@ var desserts = [
         vegetarian: true,
     }
 ];
+// Drinks 
+var drinks = [
+    {
+        id: 10,
+        name: "Soda",
+        description: "A can of soda.",
+        cost: "6",
+        vegetarian: true,
+    },
+    {
+        id: 11,
+        name: "Lemonade",
+        description: "A lemonade with our fresh lemons.",
+        cost: "5",
+        vegetarian: true,
+    },
+    {
+        id: 12,
+        name: "Water",
+        description: "A cup of water.",
+        cost: "2",
+        vegetarian: true,
+    }
+];
