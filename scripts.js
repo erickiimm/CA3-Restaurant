@@ -245,3 +245,27 @@ var mains = [
         vegetarian: true,
     }
 ];
+// Desserts
+var desserts = [
+    {
+        id: 7,
+        name: "Ice Cream",
+        description: "A cold homemade ice cream!",
+        cost: "10",
+        vegetarian: true,
+    },
+    {
+        id: 8,
+        name: "Petit Gateau",
+        description: "A secret recipe for the best petit gateau!",
+        cost: "12",
+        vegetarian: true,
+    },
+    {
+        id: 9,
+        name: "CheeseCake",
+        description: "A cake with cream cheese!",
+        cost: "12",
+        vegetarian: true,
+    }
+];
