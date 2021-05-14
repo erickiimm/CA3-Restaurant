@@ -37,7 +37,7 @@
 window.onload = () => {
     renderCustomers();
     renderMenu();
-    // Adding buttons to add itens 
+    // Buttons to add itens 
     var addButtons = document.querySelectorAll(".add");
     addButtons.forEach(element => {
         element.addEventListener("click", () => {
@@ -46,7 +46,7 @@ window.onload = () => {
             element.parentElement.querySelector("b").textContent = ` x${quantity}`;
         })
     })
-    // Adding buttons to remove itens 
+    // Buttons to remove itens 
     var addButtons = document.querySelectorAll(".remove");
     addButtons.forEach(element => {
         element.addEventListener("click", () => {
